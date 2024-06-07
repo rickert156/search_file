@@ -15,7 +15,9 @@ class SearchFiles:
 		    num+=1
 		    print(f'[{num}] {list_dir}')
 
-		enter_list = int(input('[x] Введите значение: '))
-		enter_list-=1
-		document = (list_dirs[enter_list])
-		print(f'\n[x] {document}')
+		    try:
+		    	enter_list = int(input('[x] Введите значение: '))
+		    	enter_list-=1
+		    	document = (list_dirs[enter_list])
+		    	return document
+		    except:print('\nПовторите попытку...')
